@@ -88,11 +88,17 @@ main {
   padding-inline: 20px;
 }
 
+@media (max-width: 650px) {
+  main {
+    padding-inline: 0px;
+  }
+}
+
 /* Hero */
 
 section.hero {
   margin-inline: auto;
-  padding: 50px;
+  padding-top: 50px;
   width: 100%;
   height: 800px;
   border-radius: 30px;
@@ -132,6 +138,21 @@ section.hero button:hover {
   background-color: rgba(255, 255, 255, 0.199);
 }
 
+@media (max-width: 650px) {
+  section.hero {
+    margin-inline: auto;
+    padding-top: 50px;
+    width: 100%;
+    height: 800px;
+    border-radius: 0px;
+  }
+
+  section.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+}
+
 /* Covering & PPF */
 
 section {
@@ -155,6 +176,19 @@ section h2 + p {
   color: #babace;
   margin-bottom: 20px;
   margin-inline: auto;
+}
+
+@media (max-width: 650px) {
+  section h2 {
+    font-size: 50px;
+    line-height: 1;
+    margin-inline: 20px;
+  }
+
+  section h2 + p {
+    font-size: 14px;
+    padding-inline: 20px;
+  }
 }
 
 section.features div.covering {
@@ -228,11 +262,11 @@ section.features div.covering div.text div {
   section.features div.covering {
     background: linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0) 40%,
+      rgba(255, 255, 255, 0) 0%,
       rgba(0, 81, 156, 0.2) 100%
     );
     margin: 100px 0;
-    padding: 0px 10px 10px 10px;
+    padding: 0px 50px 50px 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -241,6 +275,35 @@ section.features div.covering div.text div {
 
   section.features div.covering img {
     height: 400px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  section.features div.covering div.text h3 {
+    font-size: 35px;
+  }
+
+  section.features div.covering div.text p {
+    font-size: 14px;
+  }
+
+  section.features div.covering {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 81, 156, 0.2) 100%
+    );
+    margin: 100px 0;
+    padding: 0px 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  section.features div.covering img {
+    height: 200px;
     width: 100%;
   }
 }
@@ -351,17 +414,42 @@ input[type="range"]:hover::-webkit-slider-thumb {
 
 @media (max-width: 1000px) {
   section.vitres div.vitres {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 81, 156, 0.2) 0%,
-    rgba(255, 255, 255, 0) 60%
-  );
-  margin: 100px 0;
-  padding: 10px 10px 0px 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 100px;
-  border-radius: 30px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 81, 156, 0.2) 0%,
+      rgba(255, 255, 255, 0) 60%
+    );
+    margin: 100px 0;
+    padding: 50px 50px 0px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 100px;
+    border-radius: 30px;
+  }
 }
+
+@media (max-width: 650px) {
+  section.vitres div.vitres {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 81, 156, 0.2) 0%,
+      rgba(255, 255, 255, 0) 60%
+    );
+    margin: 100px 0;
+    padding: 20px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 100px;
+    border-radius: 30px;
+  }
+
+  section.vitres div.vitres div.text h3 {
+    font-size: 40px;
+  }
+
+  section.vitres div.vitres div.text p {
+    font-size: 14px;
+  }
 }
